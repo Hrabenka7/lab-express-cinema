@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>IHC - {{movie.title}} </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body class="movies-page">
+  <h1> {{movie.title}}</h1>
+  <div class="movies-listing">
+    <ul>
+      <div class="each-movie">
+        <li>
+          <a href="/movies">Back</a>
+          {{!--
+          <p>{{movie.image}}</p> --}}
+          <p><b>Title:</b> {{movie.title}}</p>
+          <p><b>Director:</b> {{movie.director}}</p>
+          <p><b>Stars:</b> {{movie.stars}}</p>
+          <p><b>Description:</b> {{movie.description}}</p>
+          <p><b>Showtimes:</b> {{movie.showtimes}}</p>
+          <form method="POST" action="/movies/{{movie._id}}/delete">
+            <button class="button">Delete</button>
+          </form>
+          
+        </li>
+      </div>
+    </ul>
+  </div>
+</body>
+
+</html>

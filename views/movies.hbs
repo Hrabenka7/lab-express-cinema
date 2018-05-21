@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>IHC - List of Movies</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body class="movies-page">
+  <div class = "auth">
+    <a href="auth/signup">Sign up</a>
+    <a href="#">Log in</a>
+  </div>
+  <h1> List of Movies </h1>
+  <div class="movies-listing">
+    <ul>
+      {{#each movies}} {{!-- key from movies.js --}}
+      
+      <div class="each-movie">
+      <li>
+        {{!--
+        <p>{{this.image}}</p> --}}
+        <p>
+          <b>Title:</b> {{this.title}}</p>
+        <p>
+          <b>Director:</b> {{this.director}}</p>
+        <p>
+          <b>Stars:</b> {{this.stars}}</p>
+        <p>
+          <b>Description:</b> {{this.description}}</p>
+        <p>
+          <b>Showtimes:</b> {{this.showtimes}}</p>
+        <a href="/movies/{{this._id}}">See details</a>
+      </li>
+      </div>
+
+      {{/each}}
+    </ul>
+
+    <h1><a href="/movies/create-movie" class="button">Create a New Movie</a></h1>
+  
+  </div>
+</body>
+
+</html>
+
+

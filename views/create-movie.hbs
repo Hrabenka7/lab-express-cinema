@@ -1,0 +1,38 @@
+<h3>Create a new movie</h3>
+
+<form method="POST" action="/movies">   {{!-- send collected data to /movies --}}
+
+  <div class="field">
+    <label>Title:</label>
+    <input type="text" name="title" />
+  </div>
+
+  <div class="field">
+    <label>Director:</label>
+    <input type="text" name="director" />
+  </div>
+
+  <div class="field">
+    <label>Stars:</label>
+    <input type="text" name="stars" />
+  </div>
+
+  <div class="field">
+    <label>Description:</label>
+    <textarea name="description"></textarea> 
+  </div>
+
+  <div class="field">
+    <label>Showtimes:</label>
+    <input type="text" name="showtimes" />
+  </div>
+
+ {{!--  <div class="field">
+    <label>IMAGE</label>
+    <input type="text" name="image" />
+  </div> --}}
+
+  <div class="field submit">
+    <button type="submit">Save</button>
+  </div>
+</form>
